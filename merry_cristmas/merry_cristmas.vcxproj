@@ -144,6 +144,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="random.cpp" />
+    <ClCompile Include="xmastree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="random.h" />
+    <ClInclude Include="xmastree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

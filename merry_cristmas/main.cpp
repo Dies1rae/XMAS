@@ -1,3 +1,12 @@
+/***************************************************************************
+ *   Copyright (C) 2020 by Poltavskiy Nick                                 *
+ *   unluck.bastard@gmail.com                                              *
+ *                                                                         *
+ *                                                                         *
+ *                                                                         *
+ *   Last modifed: 30.12.2020 19:33                                        *
+ ***************************************************************************/
+
 #include <iostream>
 #include <vector>
 #include <iomanip>
@@ -12,55 +21,14 @@
 #include <process.h>
 #include <thread>
 
+
+#include "random.h"
+#include "xmastree.h"
+
 #pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
-class x_mas_tree {
-public:
-	explicit x_mas_tree() = default;
-
-	void x_mas_tree_print() {
-		for (const auto E : this->tree) {
-			std::cout << E << std::endl;
-		}
-	}
-
-	std::vector<std::string> get_xmas_tree() {
-		return this->tree;
-	}
-
-private:
-	std::vector<std::string> tree{
-
-"   	     /\\",
-"            <  >",
-"   	     \\/",
-"             /\\",
-"            /  \\",
-"           /++++\\",
-"          /  ()  \\",
-"          /      \\",
-"         /~`~`~`~`\\",
-"        /  ()  ()  \\",
-"        /          \\",
-"       /*&*&*&*&*&*&\\",
-"      /  ()  ()  ()  \\",
-"      /              \\",
-"     /++++++++++++++++\\",
-"    /  ()  ()  ()  ()  \\",
-"    /                  \\",
-"   /~`~`~`~`~`~`~`~`~`~`\\",
-"  /  ()  ()  ()  ()  ()  \\",
-"  /*&*&*&*&*&*&*&*&*&*&*&\\",
-" /                        \\",
-"/,.,.,.,.,.,.,.,.,.,.,.,.,.\\",
-"       	   |   |",
-"          |`````|",
-"          \\_____/"
-
-	};
-};
 
 
 void muslo() {
