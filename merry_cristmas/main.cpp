@@ -53,6 +53,10 @@ int main() {
 		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
 		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
 		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
+		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
+		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
+		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
+
 
 		tree.x_mas_tree_print();
 		Sleep(500);
