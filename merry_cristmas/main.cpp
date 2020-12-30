@@ -29,10 +29,8 @@
 
 using namespace std;
 
-
-
 void muslo() {
-	std::string mus = "play .\\x_mas.mp3 wait";
+	std::string mus = "play .\\x_mas.mp3 ";
 	std::wstring mus_tmp(mus.begin(), mus.end());
 	WORD result = mciSendString(mus_tmp.c_str(), NULL, 0, NULL);
 	if (result) {
@@ -40,15 +38,8 @@ void muslo() {
 	}
 }
 
-void snowflake(x_mas_tree tree, int pos, int elem, int color) {
-	tree.print_snow_colored(pos + (pos % 2), elem + (elem / 2), color);
-	Sleep(25);
-	system("cls");
-}
-
 int main() {
 	x_mas_tree tree;
-	rnd_t rand_color;
 	rnd_t rand_str;
 	rnd_t rand_elem;
 
@@ -58,8 +49,16 @@ int main() {
 		int str_pos_tmp = rand_str.irnd(tree.get_xmas_tree().size());
 		int elem_pos_tmp = rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size());
 		
-		snowflake(tree, str_pos_tmp, elem_pos_tmp, rand_color.irnd(255));
+		tree.set_snow(str_pos_tmp, elem_pos_tmp);
+		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
+		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
+		tree.set_snow(rand_str.irnd(tree.get_xmas_tree().size()), rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size()));
 
+		tree.x_mas_tree_print();
+		Sleep(500);
+		system("cls");
+
+		tree.set_snow_default();
 	}
 
 	thr.join();

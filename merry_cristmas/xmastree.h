@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <Windows.h>
-
+#include "random.h"
 
 
 class x_mas_tree {
@@ -14,13 +14,14 @@ public:
 
 	std::vector<std::string> get_xmas_tree();
 
-	void print_snow_colored(const int str_pos, const int elem_pos, const int elem_color);
+	void set_snow(const int str_pos, const int elem_pos);
+	void set_snow_default();
 
 private:
 	std::vector<std::string> tree{
 
 "   	     /\\",
-"            <  >",
+"            <++>",
 "   	     \\/",
 "             /\\",
 "            /  \\",
