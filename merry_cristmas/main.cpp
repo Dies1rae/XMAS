@@ -16,7 +16,21 @@
 
 using namespace std;
 
-void x_mas_tree() {
+class x_mas_tree {
+public:
+	explicit x_mas_tree() = default;
+
+	void x_mas_tree_print() {
+		for (const auto E : this->tree) {
+			std::cout << E << std::endl;
+		}
+	}
+
+	std::vector<std::string> get_xmas_tree() {
+		return this->tree;
+	}
+
+private:
 	std::vector<std::string> tree{
 
 "   	     /\\",
@@ -46,11 +60,8 @@ void x_mas_tree() {
 "          \\_____/"
 
 	};
+};
 
-	for (const auto E : tree) {
-		std::cout << E << std::endl;
-	}
-}
 
 void muslo() {
 	std::string mus = "play .\\x_mas.mp3 wait";
@@ -62,8 +73,9 @@ void muslo() {
 }
 
 int main() {
+	x_mas_tree tree;
 	thread thr(muslo);
-	x_mas_tree();
+	tree.x_mas_tree_print();
 	thr.join();
 	return 0;
 }
