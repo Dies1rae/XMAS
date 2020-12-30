@@ -40,10 +40,29 @@ void muslo() {
 	}
 }
 
+void snowflake(x_mas_tree tree, int pos, int elem, int color) {
+	tree.print_snow_colored(pos + (pos % 2), elem + (elem / 2), color);
+	Sleep(25);
+	system("cls");
+}
+
 int main() {
 	x_mas_tree tree;
+	rnd_t rand_color;
+	rnd_t rand_str;
+	rnd_t rand_elem;
+
 	thread thr(muslo);
-	tree.x_mas_tree_print();
+	
+	while (1) {
+		int str_pos_tmp = rand_str.irnd(tree.get_xmas_tree().size());
+		int elem_pos_tmp = rand_elem.irnd(tree.get_xmas_tree()[str_pos_tmp].size());
+		
+		snowflake(tree, str_pos_tmp, elem_pos_tmp, rand_color.irnd(255));
+
+	}
+
 	thr.join();
+
 	return 0;
 }

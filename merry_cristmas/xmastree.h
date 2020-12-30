@@ -2,6 +2,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <Windows.h>
+
+
 
 class x_mas_tree {
 public:
@@ -11,7 +14,7 @@ public:
 
 	std::vector<std::string> get_xmas_tree();
 
-	void print_snow_colored(size_t elem_pos, size_t elem_color);
+	void print_snow_colored(const int str_pos, const int elem_pos, const int elem_color);
 
 private:
 	std::vector<std::string> tree{
