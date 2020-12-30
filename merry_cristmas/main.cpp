@@ -30,7 +30,7 @@
 using namespace std;
 
 void muslo() {
-	std::string mus = "play .\\x_mas.mp3 ";
+	std::string mus = "play .\\x_mas_bells.mp3 repeat";
 	std::wstring mus_tmp(mus.begin(), mus.end());
 	WORD result = mciSendString(mus_tmp.c_str(), NULL, 0, NULL);
 	if (result) {
